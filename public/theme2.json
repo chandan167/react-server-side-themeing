@@ -35,9 +35,9 @@
       },
       "type": "light",
       "primary": {
-        "light": "#7986cb",
-        "main": "#212c56",
-        "dark": "#303f9f",
+        "light": "#e57373",
+        "main": "#f44336",
+        "dark": "#d32f2f",
         "contrastText": "#fff"
       },
       "secondary": {

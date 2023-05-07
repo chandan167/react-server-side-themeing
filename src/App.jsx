@@ -13,8 +13,15 @@ function App() {
 
 
   useLayoutEffect(() => {
-    axios.get('/theme.json').then(response => {
+    let themeName = localStorage.getItem('themeName') || 'theme.json';
+    axios.get(`/${themeName}`).then(response => {
       const theme = response.data;
+      if(themeName == 'theme2.json'){
+        themeName = 'theme.json'
+      }else{
+        themeName = 'theme2.json'
+      }
+      localStorage.setItem('themeName', themeName);
       setThemeObj(theme);
       setThemePrepare(true);
     })
